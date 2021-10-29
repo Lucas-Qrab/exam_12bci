@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1 class="text-center">Description du restaurant</h1>
+    <div class="row justify-content-center">
+        <div class="col-sm-3">
+            <div class="card">
+                <img class="card-img-top" src="{{ restaurant.image }}" alt="logodu restaurant" width="200">
+                <div class="card-body">
+                    <p class="card-text">
+                        Restaurant : <br>
+                        {{ restaurant.nom }}
+                        <br><br>
+                        adresse : <br>
+                        {{ restaurant.adresse }}
+                        <br>
+                        {{ restaurant.Ville.name }} 
+                        <br>
+                        <br><hr>
+                        Proprietaire :<br>
+                        {{ restaurant.proprietaire.nom }} {{ restaurant.proprietaire.prenom }}
+                        <br>
+                        née le :
+                        {{ restaurant.proprietaire.dateNaissance }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

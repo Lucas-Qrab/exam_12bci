@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+    {% for restaurant in restaurants %}
+        <div class="col-sm-2">
+            <div class="card">
+                <img class="card-img-top" src="{{ restaurant.image }}" alt="logo du restaurant">
+                <div class="card-body">
+                    <p class="card-text">
+                        {{ restaurant.nom }}
+                        <br>
+                        {{ restaurant.Ville.name }}
+                        <br>
+                        {{ restaurant.adresse }} 
+                        <br>
+                        <a type="button" class="btn btn-outline-primary btn-sm mt-2" href="{{ path("restaurant", {nom: restaurant.nom}) }}" role="button">Consulter</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

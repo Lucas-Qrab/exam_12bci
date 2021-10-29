@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+    database:
+        image: 'mysql:latest'
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+            MYSQL_DATABASE: restaurant
+        ports:
+            - '3306'
